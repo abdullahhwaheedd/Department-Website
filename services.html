@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title displayed in browser tab -->
+    <title>Computer Science Department - Services</title>
+    
+    <!-- 
+        INTERNAL CSS: The entire stylesheet is included here to ensure the page 
+        loads correctly and is fully styled, regardless of external file path issues.
+    -->
+    <style>
+        /* ========================================
+           DEPARTMENT WEBSITE - MAIN STYLESHEET
+           ======================================== */
+
+        /* SECTION 1: GLOBAL STYLES AND RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* SECTION 2: CONTAINER AND LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* SECTION 3: HEADER AND NAVIGATION */
+        header {
+            background-color: #1a3a52;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        .logo {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+        }
+
+        nav a.active {
+            background-color: #2196F3;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        /* SECTION 4: MAIN CONTENT AND SECTIONS */
+        main {
+            padding: 40px 0;
+            min-height: calc(100vh - 200px);
+        }
+
+        section {
+            padding: 40px 0;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            background-color: #f5f5f5;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #1a3a52;
+        }
+
+        .intro p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .page-title {
+            background-color: #1a3a52;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .page-title h2 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .content-section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a3a52;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* SECTION 5: CARDS AND GRID LAYOUTS */
+        .highlights {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .highlights .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .highlight-card {
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlight-card h3 {
+            font-size: 36px;
+            color: #2196F3;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .highlight-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .programs {
+            padding: 40px 0;
+        }
+
+        .programs .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .programs h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1a3a52;
+            grid-column: 1 / -1;
+        }
+
+        .program-card {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .program-card:hover {
+            background-color: #fff;
+            border-left: 4px solid #2196F3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card h4 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #1a3a52;
+            font-weight: 600;
+        }
+
+        .program-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .info-card {
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .info-card:hover {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card h4 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #1a3a52;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .info-card a {
+            color: #2196F3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-card a:hover {
+            color: #1a3a52;
+            text-decoration: underline;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* SECTION 6: LISTS AND TEXT ELEMENTS */
+        .mission-vision {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .mission-vision .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .mission, .vision {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .mission h3, .vision h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1a3a52;
+            font-weight: 600;
+        }
+
+        .mission p, .vision p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .values {
+            padding: 40px 0;
+        }
+
+        .values h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1a3a52;
+            text-align: center;
+        }
+
+        .values-list, .services-list, .facilities-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .values-list li, .services-list li, .facilities-list li {
+            padding: 12px 0;
+            padding-left: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .values-list li:last-child, .services-list li:last-child, .facilities-list li:last-child {
+            border-bottom: none;
+        }
+
+        .values-list strong, .services-list strong, .facilities-list strong {
+            color: #1a3a52;
+            font-weight: 600;
+        }
+
+        .support-services {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .support-services h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1a3a52;
+        }
+
+        .facilities {
+            padding: 40px 0;
+        }
+
+        .facilities h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1a3a52;
+        }
+
+        /* SECTION 7: CONTACT FORM STYLES */
+        .contact-info {
+            padding: 40px 0;
+        }
+
+        .contact-info .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #1a3a52;
+            grid-column: 1 / -1;
+        }
+
+        .contact-form-section {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .contact-form-section h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #1a3a52;
+        }
+
+        .contact-form-section p {
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .contact-form {
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a3a52;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2196F3;
+            box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: #1a3a52;
+            color: #fff;
+            border: 2px solid #1a3a52;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2196F3;
+            border-color: #2196F3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* SECTION 8: FOOTER STYLES */
+        footer {
+            background-color: #1a3a52;
+            color: #fff;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #87CEEB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* SECTION 9: ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* SECTION 10: RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .page-title h2 {
+                font-size: 28px;
+            }
+
+            .intro h2 {
+                font-size: 24px;
+            }
+
+            .content-section h3 {
+                font-size: 22px;
+            }
+
+            .highlight-card h3 {
+                font-size: 28px;
+            }
+
+            .program-card h4 {
+                font-size: 16px;
+            }
+
+            .mission h3, .vision h3 {
+                font-size: 20px;
+            }
+
+            .values h3 {
+                font-size: 22px;
+            }
+
+            .support-services h3 {
+                font-size: 22px;
+            }
+
+            .facilities h3 {
+                font-size: 22px;
+            }
+
+            .contact-form-section h3 {
+                font-size: 22px;
+            }
+
+            .contact-info h3 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            nav a {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .page-title h2 {
+                font-size: 22px;
+            }
+
+            .intro h2 {
+                font-size: 20px;
+            }
+
+            .content-section h3 {
+                font-size: 18px;
+            }
+
+            .highlight-card h3 {
+                font-size: 24px;
+            }
+
+            .programs .container {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-info .container {
+                grid-template-columns: 1fr;
+            }
+
+            .submit-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section containing the site title and navigation -->
+    <header>
+        <div class="container">
+            <!-- Department name and branding -->
+            <h1 class="logo">Computer Science Department</h1>
+            
+            <!-- Navigation menu for all pages -->
+            <nav>
+                <ul>
+                    <!-- Each list item contains a link to different pages -->
+                    <li><a href="index_standalone.html">Home</a></li>
+                    <li><a href="about_standalone.html">About</a></li>
+                    <li><a href="services_standalone.html" class="active">Services</a></li>
+                    <li><a href="contact_standalone.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area of the page -->
+    <main>
+        <!-- Page title section -->
+        <section class="page-title">
+            <div class="container">
+                <h2>Our Services & Programs</h2>
+            </div>
+        </section>
+
+        <!-- Introduction to services -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Introductory paragraph about services -->
+                <p>
+                    The Computer Science Department offers a comprehensive range of programs and services 
+                    designed to meet the diverse needs of our students and the broader academic community. 
+                    From undergraduate education to advanced research opportunities, we provide pathways 
+                    for success in the technology industry.
+                </p>
+            </div>
+        </section>
+
+        <!-- Academic Programs section with cards -->
+        <section class="programs">
+            <div class="container">
+                <!-- Section heading -->
+                <h3>Academic Programs</h3>
+                
+                <!-- Program cards displayed in a grid layout -->
+                <!-- Each card represents a different academic program -->
+                
+                <!-- Bachelor's degree program card -->
+                <div class="program-card">
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <p>
+                        A comprehensive four-year program covering fundamental and advanced topics in 
+                        computer science, including algorithms, data structures, software engineering, 
+                        and artificial intelligence.
+                    </p>
+                </div>
+
+                <!-- Master's degree program card -->
+                <div class="program-card">
+                    <h4>Master of Science in Computer Science</h4>
+                    <p>
+                        An advanced two-year program for students seeking specialized knowledge in areas 
+                        such as machine learning, cybersecurity, distributed systems, and cloud computing.
+                    </p>
+                </div>
+
+                <!-- PhD program card -->
+                <div class="program-card">
+                    <h4>Doctor of Philosophy in Computer Science</h4>
+                    <p>
+                        A research-focused doctoral program for students interested in conducting original 
+                        research and contributing to the advancement of computer science knowledge.
+                    </p>
+                </div>
+
+                <!-- Certificate program card -->
+                <div class="program-card">
+                    <h4>Professional Certificates</h4>
+                    <p>
+                        Short-term specialized programs designed for professionals seeking to update their 
+                        skills in emerging technologies such as cloud computing, AI, and cybersecurity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Services section -->
+        <section class="support-services">
+            <div class="container">
+                <!-- Section heading -->
+                <h3>Student Support Services</h3>
+                
+                <!-- Unordered list of support services -->
+                <ul class="services-list">
+                    <!-- Each list item describes a support service -->
+                    <li><strong>Academic Advising:</strong> Personalized guidance for course selection and career planning</li>
+                    <li><strong>Tutoring Services:</strong> One-on-one and group tutoring for challenging courses</li>
+                    <li><strong>Career Services:</strong> Resume review, interview preparation, and job placement assistance</li>
+                    <li><strong>Research Opportunities:</strong> Access to faculty-led research projects and internships</li>
+                    <li><strong>Mentorship Programs:</strong> Connections with industry professionals and alumni</li>
+                    <li><strong>Technical Support:</strong> Help with lab equipment, software, and computing resources</li>
+                    <li><strong>Scholarship Opportunities:</strong> Financial aid and merit-based scholarships</li>
+                    <li><strong>Student Organizations:</strong> Clubs and societies for networking and professional development</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Facilities and Resources section -->
+        <section class="facilities">
+            <div class="container">
+                <!-- Section heading -->
+                <h3>Facilities & Resources</h3>
+                
+                <!-- Unordered list of available facilities and resources -->
+                <ul class="facilities-list">
+                    <!-- Each list item describes a facility or resource -->
+                    <li><strong>Computer Labs:</strong> State-of-the-art laboratories with modern workstations and software</li>
+                    <li><strong>Research Centers:</strong> Dedicated spaces for AI, cybersecurity, and software engineering research</li>
+                    <li><strong>Library Resources:</strong> Extensive collection of textbooks, journals, and online databases</li>
+                    <li><strong>High-Performance Computing:</strong> Access to servers and clusters for computational research</li>
+                    <li><strong>Collaboration Spaces:</strong> Modern facilities for group projects and team-based learning</li>
+                    <li><strong>Seminar Rooms:</strong> Equipped spaces for lectures, workshops, and guest presentations</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section with copyright and additional information -->
+    <footer>
+        <div class="container">
+            <!-- Copyright notice -->
+            <p>&copy; 2026 Computer Science Department. All rights reserved.</p>
+            
+            <!-- Contact information in footer -->
+            <p>Email: <a href="mailto:info@cs-dept.edu">info@cs-dept.edu</a> | Phone: (555) 123-4567</p>
+        </div>
+    </footer>
+</body>
+</html>

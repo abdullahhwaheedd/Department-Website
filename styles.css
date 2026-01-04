@@ -1,0 +1,1027 @@
+/* ========================================
+   DEPARTMENT WEBSITE - MAIN STYLESHEET
+   ======================================== */
+
+/* SECTION 1: GLOBAL STYLES AND RESET
+   This section defines base styles that apply to all elements on the website.
+   We reset default browser margins and padding, and set consistent typography. */
+
+/* Universal selector to apply styles to all elements */
+* {
+    /* Remove default margin from all elements for consistent spacing */
+    margin: 0;
+    /* Remove default padding from all elements for consistent spacing */
+    padding: 0;
+    /* Use border-box model so padding/border are included in element width/height */
+    box-sizing: border-box;
+}
+
+/* Root element styles - defines CSS variables and base font settings */
+html {
+    /* Set smooth scrolling behavior when clicking anchor links */
+    scroll-behavior: smooth;
+}
+
+/* Body element styles - applies to entire page content */
+body {
+    /* Set the primary font family with fallbacks for better compatibility */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Set the base font size for the entire document */
+    font-size: 16px;
+    /* Set the line height for better readability of text */
+    line-height: 1.6;
+    /* Set the text color to a dark gray for professional appearance */
+    color: #333;
+    /* Set the background color to white for clean appearance */
+    background-color: #fff;
+}
+
+/* ========================================
+   SECTION 2: CONTAINER AND LAYOUT
+   ======================================== */
+
+/* Container class for consistent page width and centered content */
+.container {
+    /* Set maximum width to keep content readable on large screens */
+    max-width: 1200px;
+    /* Center the container horizontally on the page */
+    margin: 0 auto;
+    /* Add padding on left and right for spacing on smaller screens */
+    padding: 0 20px;
+}
+
+/* ========================================
+   SECTION 3: HEADER AND NAVIGATION
+   ======================================== */
+
+/* Header element styles - top section of every page */
+header {
+    /* Set background color to a professional dark blue */
+    background-color: #1a3a52;
+    /* Set text color to white for contrast */
+    color: #fff;
+    /* Add padding for spacing inside the header */
+    padding: 20px 0;
+    /* Add subtle shadow below header for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add fade-in animation when page loads */
+    animation: fadeIn 0.6s ease-in;
+}
+
+/* Logo/department name styles */
+.logo {
+    /* Set font size to make it prominent */
+    font-size: 28px;
+    /* Add margin below the logo for spacing */
+    margin-bottom: 15px;
+    /* Add font weight to make it bold and stand out */
+    font-weight: 700;
+    /* Add letter spacing for professional appearance */
+    letter-spacing: 0.5px;
+}
+
+/* Navigation menu styles */
+nav ul {
+    /* Remove default list styling (bullets) */
+    list-style: none;
+    /* Display list items horizontally instead of vertically */
+    display: flex;
+    /* Add space between navigation items */
+    gap: 30px;
+    /* Wrap navigation items to next line on smaller screens */
+    flex-wrap: wrap;
+}
+
+/* Navigation link styles */
+nav a {
+    /* Set text color to white for visibility on dark background */
+    color: #fff;
+    /* Remove default underline from links */
+    text-decoration: none;
+    /* Add padding around link text for larger click area */
+    padding: 8px 12px;
+    /* Add smooth transition effect for hover state */
+    transition: all 0.3s ease;
+    /* Add border radius for modern appearance */
+    border-radius: 4px;
+    /* Set font weight to make navigation text slightly bold */
+    font-weight: 500;
+}
+
+/* Hover effect for navigation links - changes appearance when user hovers */
+nav a:hover {
+    /* Change background color on hover for visual feedback */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Add slight padding increase for interactive feel */
+    padding: 8px 16px;
+}
+
+/* Active navigation link - indicates current page */
+nav a.active {
+    /* Set background color to indicate current page */
+    background-color: #2196F3;
+    /* Add padding for consistent sizing */
+    padding: 8px 16px;
+    /* Add border radius for rounded corners */
+    border-radius: 4px;
+}
+
+/* ========================================
+   SECTION 4: MAIN CONTENT AND SECTIONS
+   ======================================== */
+
+/* Main element styles - primary content area */
+main {
+    /* Add padding for spacing from edges */
+    padding: 40px 0;
+    /* Set minimum height to fill viewport if content is short */
+    min-height: calc(100vh - 200px);
+}
+
+/* Generic section styles - used for all major content sections */
+section {
+    /* Add padding for internal spacing */
+    padding: 40px 0;
+    /* Add fade-in animation when sections appear */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Hero section styles - large welcome banner on home page */
+.hero {
+    /* Set background color to a professional blue gradient */
+    background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+    /* Set text color to white for contrast */
+    color: #fff;
+    /* Add padding for spacing inside hero section */
+    padding: 80px 0;
+    /* Center text alignment for professional appearance */
+    text-align: center;
+}
+
+/* Hero section heading styles */
+.hero h2 {
+    /* Set font size to make heading very prominent */
+    font-size: 48px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 10px;
+    /* Add font weight to make heading bold */
+    font-weight: 700;
+}
+
+/* Hero subtitle styles */
+.subtitle {
+    /* Set font size slightly larger than body text */
+    font-size: 20px;
+    /* Set opacity to make text slightly lighter for visual hierarchy */
+    opacity: 0.9;
+    /* Add letter spacing for elegant appearance */
+    letter-spacing: 1px;
+}
+
+/* Introduction section styles */
+.intro {
+    /* Set background color to light gray for subtle contrast */
+    background-color: #f5f5f5;
+}
+
+/* Introduction section heading styles */
+.intro h2 {
+    /* Set font size for main section heading */
+    font-size: 32px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 20px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* Introduction paragraph styles */
+.intro p {
+    /* Set font size to be readable */
+    font-size: 16px;
+    /* Add margin below each paragraph for spacing */
+    margin-bottom: 15px;
+    /* Set line height for better readability */
+    line-height: 1.8;
+}
+
+/* Page title section styles - used on About, Services, Contact pages */
+.page-title {
+    /* Set background color to match header for consistency */
+    background-color: #1a3a52;
+    /* Set text color to white for contrast */
+    color: #fff;
+    /* Add padding for spacing inside section */
+    padding: 40px 0;
+    /* Center text alignment */
+    text-align: center;
+}
+
+/* Page title heading styles */
+.page-title h2 {
+    /* Set font size to make heading prominent */
+    font-size: 40px;
+    /* Add font weight to make heading bold */
+    font-weight: 700;
+}
+
+/* Content section styles - general content area */
+.content-section {
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Content section heading styles */
+.content-section h3 {
+    /* Set font size for subheading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 20px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* Content section paragraph styles */
+.content-section p {
+    /* Set font size to be readable */
+    font-size: 16px;
+    /* Add margin below paragraph for spacing */
+    margin-bottom: 15px;
+    /* Set line height for better readability */
+    line-height: 1.8;
+}
+
+/* ========================================
+   SECTION 5: CARDS AND GRID LAYOUTS
+   ======================================== */
+
+/* Highlight cards on home page - display statistics */
+.highlights {
+    /* Set background color to light gray for contrast */
+    background-color: #f5f5f5;
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Highlight card container - uses CSS Grid for layout */
+.highlights .container {
+    /* Use CSS Grid to create flexible layout */
+    display: grid;
+    /* Create 3 columns on large screens, responsive on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Add gap between grid items for spacing */
+    gap: 30px;
+}
+
+/* Individual highlight card styles */
+.highlight-card {
+    /* Add background color for card appearance */
+    background-color: #fff;
+    /* Add padding for internal spacing */
+    padding: 30px;
+    /* Center text alignment */
+    text-align: center;
+    /* Add border radius for modern appearance */
+    border-radius: 8px;
+    /* Add box shadow for depth effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add smooth transition for hover effect */
+    transition: all 0.3s ease;
+    /* Add animation when card appears */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Hover effect for highlight cards */
+.highlight-card:hover {
+    /* Lift card up with shadow on hover */
+    transform: translateY(-5px);
+    /* Increase shadow for depth effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlight card heading styles */
+.highlight-card h3 {
+    /* Set font size to make number prominent */
+    font-size: 36px;
+    /* Set color to match header for consistency */
+    color: #2196F3;
+    /* Add margin below number for spacing */
+    margin-bottom: 10px;
+    /* Add font weight to make number bold */
+    font-weight: 700;
+}
+
+/* Highlight card paragraph styles */
+.highlight-card p {
+    /* Set font size to be readable */
+    font-size: 16px;
+    /* Set color to gray for secondary text */
+    color: #666;
+}
+
+/* Program cards section - displays academic programs */
+.programs {
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Program cards container - uses CSS Grid for layout */
+.programs .container {
+    /* Use CSS Grid to create flexible layout */
+    display: grid;
+    /* Create 2 columns on large screens, responsive on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Add gap between grid items for spacing */
+    gap: 25px;
+}
+
+/* Program card heading styles */
+.programs h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 30px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Make heading span all columns in grid */
+    grid-column: 1 / -1;
+}
+
+/* Individual program card styles */
+.program-card {
+    /* Add background color for card appearance */
+    background-color: #f9f9f9;
+    /* Add padding for internal spacing */
+    padding: 25px;
+    /* Add border to define card boundaries */
+    border: 1px solid #e0e0e0;
+    /* Add border radius for modern appearance */
+    border-radius: 8px;
+    /* Add smooth transition for hover effect */
+    transition: all 0.3s ease;
+    /* Add animation when card appears */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Hover effect for program cards */
+.program-card:hover {
+    /* Change background color on hover */
+    background-color: #fff;
+    /* Add left border accent on hover */
+    border-left: 4px solid #2196F3;
+    /* Lift card up with shadow on hover */
+    transform: translateY(-3px);
+    /* Increase shadow for depth effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Program card heading styles */
+.program-card h4 {
+    /* Set font size for card heading */
+    font-size: 18px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 12px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Add font weight to make heading bold */
+    font-weight: 600;
+}
+
+/* Program card paragraph styles */
+.program-card p {
+    /* Set font size to be readable */
+    font-size: 14px;
+    /* Set color to gray for secondary text */
+    color: #555;
+    /* Set line height for better readability */
+    line-height: 1.6;
+}
+
+/* Information cards - used on contact page */
+.info-card {
+    /* Add background color for card appearance */
+    background-color: #f5f5f5;
+    /* Add padding for internal spacing */
+    padding: 25px;
+    /* Add border radius for modern appearance */
+    border-radius: 8px;
+    /* Add smooth transition for hover effect */
+    transition: all 0.3s ease;
+    /* Add animation when card appears */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Hover effect for information cards */
+.info-card:hover {
+    /* Change background color on hover */
+    background-color: #fff;
+    /* Add box shadow for depth effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Information card heading styles */
+.info-card h4 {
+    /* Set font size for card heading */
+    font-size: 18px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 12px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Add font weight to make heading bold */
+    font-weight: 600;
+}
+
+/* Information card paragraph styles */
+.info-card p {
+    /* Set font size to be readable */
+    font-size: 14px;
+    /* Add margin below paragraph for spacing */
+    margin-bottom: 8px;
+}
+
+/* Information card link styles */
+.info-card a {
+    /* Set color to match header for consistency */
+    color: #2196F3;
+    /* Remove default underline from links */
+    text-decoration: none;
+    /* Add smooth transition for hover effect */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for information card links */
+.info-card a:hover {
+    /* Change color to darker blue on hover */
+    color: #1a3a52;
+    /* Add underline on hover */
+    text-decoration: underline;
+}
+
+/* Small text styles - used for secondary information */
+.small-text {
+    /* Set font size to be smaller than body text */
+    font-size: 12px;
+    /* Set color to gray for secondary text */
+    color: #999;
+}
+
+/* ========================================
+   SECTION 6: LISTS AND TEXT ELEMENTS
+   ======================================== */
+
+/* Mission and vision section styles */
+.mission-vision {
+    /* Set background color to light gray for contrast */
+    background-color: #f5f5f5;
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Mission and vision container - uses CSS Grid for layout */
+.mission-vision .container {
+    /* Use CSS Grid to create flexible layout */
+    display: grid;
+    /* Create 2 columns on large screens, responsive on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Add gap between grid items for spacing */
+    gap: 40px;
+}
+
+/* Mission section styles */
+.mission, .vision {
+    /* Add animation when section appears */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Mission and vision heading styles */
+.mission h3, .vision h3 {
+    /* Set font size for section heading */
+    font-size: 24px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 15px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Add font weight to make heading bold */
+    font-weight: 600;
+}
+
+/* Mission and vision paragraph styles */
+.mission p, .vision p {
+    /* Set font size to be readable */
+    font-size: 15px;
+    /* Set line height for better readability */
+    line-height: 1.8;
+    /* Set color to gray for secondary text */
+    color: #555;
+}
+
+/* Values section styles */
+.values {
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Values section heading styles */
+.values h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 30px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Center text alignment */
+    text-align: center;
+}
+
+/* Values list styles */
+.values-list, .services-list, .facilities-list {
+    /* Remove default list styling (bullets) */
+    list-style: none;
+    /* Add margin for spacing */
+    margin: 20px 0;
+}
+
+/* Values list item styles */
+.values-list li, .services-list li, .facilities-list li {
+    /* Add padding for internal spacing */
+    padding: 12px 0;
+    /* Add padding-left for indentation */
+    padding-left: 20px;
+    /* Add border-bottom for visual separation */
+    border-bottom: 1px solid #e0e0e0;
+    /* Set font size to be readable */
+    font-size: 15px;
+    /* Set line height for better readability */
+    line-height: 1.6;
+}
+
+/* Remove border from last list item */
+.values-list li:last-child, .services-list li:last-child, .facilities-list li:last-child {
+    /* Remove bottom border from last item */
+    border-bottom: none;
+}
+
+/* Values list item strong text styles */
+.values-list strong, .services-list strong, .facilities-list strong {
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Add font weight to make text bold */
+    font-weight: 600;
+}
+
+/* Support services section styles */
+.support-services {
+    /* Set background color to light gray for contrast */
+    background-color: #f5f5f5;
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Support services heading styles */
+.support-services h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 30px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* Facilities section styles */
+.facilities {
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Facilities heading styles */
+.facilities h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 30px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* ========================================
+   SECTION 7: CONTACT FORM STYLES
+   ======================================== */
+
+/* Contact information section styles */
+.contact-info {
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Contact info container - uses CSS Grid for layout */
+.contact-info .container {
+    /* Use CSS Grid to create flexible layout */
+    display: grid;
+    /* Create 4 columns on large screens, responsive on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Add gap between grid items for spacing */
+    gap: 25px;
+}
+
+/* Contact info heading styles */
+.contact-info h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 30px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+    /* Make heading span all columns in grid */
+    grid-column: 1 / -1;
+}
+
+/* Contact form section styles */
+.contact-form-section {
+    /* Set background color to light gray for contrast */
+    background-color: #f5f5f5;
+    /* Add padding for spacing */
+    padding: 40px 0;
+}
+
+/* Contact form section heading styles */
+.contact-form-section h3 {
+    /* Set font size for section heading */
+    font-size: 28px;
+    /* Add margin below heading for spacing */
+    margin-bottom: 15px;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* Contact form section paragraph styles */
+.contact-form-section p {
+    /* Add margin below paragraph for spacing */
+    margin-bottom: 30px;
+    /* Set font size to be readable */
+    font-size: 15px;
+    /* Set color to gray for secondary text */
+    color: #666;
+}
+
+/* Contact form styles */
+.contact-form {
+    /* Set maximum width for better readability */
+    max-width: 600px;
+}
+
+/* Form group styles - wrapper for each form field */
+.form-group {
+    /* Add margin below each form group for spacing */
+    margin-bottom: 20px;
+    /* Add animation when form appears */
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Form label styles */
+.form-group label {
+    /* Display label as block element for full width */
+    display: block;
+    /* Add margin below label for spacing */
+    margin-bottom: 8px;
+    /* Set font weight to make label bold */
+    font-weight: 600;
+    /* Set color to match header for consistency */
+    color: #1a3a52;
+}
+
+/* Form input and textarea styles */
+.form-group input,
+.form-group textarea {
+    /* Display input as block element for full width */
+    display: block;
+    /* Set width to 100% of parent container */
+    width: 100%;
+    /* Add padding for internal spacing */
+    padding: 12px;
+    /* Add margin for spacing */
+    margin: 0;
+    /* Add border for visual definition */
+    border: 1px solid #ddd;
+    /* Add border radius for modern appearance */
+    border-radius: 4px;
+    /* Set font family to match body text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Set font size to be readable */
+    font-size: 14px;
+    /* Add smooth transition for focus effect */
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for form inputs - changes appearance when user clicks */
+.form-group input:focus,
+.form-group textarea:focus {
+    /* Remove default browser outline */
+    outline: none;
+    /* Change border color on focus */
+    border-color: #2196F3;
+    /* Add box shadow for focus effect */
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+/* Submit button styles */
+.submit-btn {
+    /* Display button as inline-block for proper sizing */
+    display: inline-block;
+    /* Add padding for button sizing */
+    padding: 14px 40px;
+    /* Set background color to match header */
+    background-color: #1a3a52;
+    /* Set text color to white for contrast */
+    color: #fff;
+    /* Add border with same color as background */
+    border: 2px solid #1a3a52;
+    /* Add border radius for modern appearance */
+    border-radius: 4px;
+    /* Set font size to be readable */
+    font-size: 16px;
+    /* Add font weight to make button text bold */
+    font-weight: 600;
+    /* Change cursor to pointer on hover */
+    cursor: pointer;
+    /* Add smooth transition for hover effect */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for submit button */
+.submit-btn:hover {
+    /* Change background color on hover */
+    background-color: #2196F3;
+    /* Change border color on hover */
+    border-color: #2196F3;
+    /* Lift button up with shadow on hover */
+    transform: translateY(-2px);
+    /* Add box shadow for depth effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active effect for submit button - when clicked */
+.submit-btn:active {
+    /* Remove lift effect when button is pressed */
+    transform: translateY(0);
+}
+
+/* ========================================
+   SECTION 8: FOOTER STYLES
+   ======================================== */
+
+/* Footer element styles - bottom section of every page */
+footer {
+    /* Set background color to match header */
+    background-color: #1a3a52;
+    /* Set text color to white for contrast */
+    color: #fff;
+    /* Add padding for spacing inside footer */
+    padding: 30px 0;
+    /* Add margin-top to separate from main content */
+    margin-top: 40px;
+    /* Add border-top for visual separation */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer paragraph styles */
+footer p {
+    /* Add margin below each paragraph for spacing */
+    margin-bottom: 10px;
+    /* Set font size to be readable */
+    font-size: 14px;
+}
+
+/* Footer link styles */
+footer a {
+    /* Set color to light blue for links */
+    color: #87CEEB;
+    /* Remove default underline from links */
+    text-decoration: none;
+    /* Add smooth transition for hover effect */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for footer links */
+footer a:hover {
+    /* Change color to white on hover */
+    color: #fff;
+    /* Add underline on hover */
+    text-decoration: underline;
+}
+
+/* ========================================
+   SECTION 9: ANIMATIONS
+   ======================================== */
+
+/* Fade-in animation - used for smooth content appearance */
+@keyframes fadeIn {
+    /* Starting state - element is invisible */
+    from {
+        /* Set opacity to 0 (completely transparent) */
+        opacity: 0;
+        /* Move element down 20 pixels */
+        transform: translateY(20px);
+    }
+    /* Ending state - element is fully visible */
+    to {
+        /* Set opacity to 1 (completely opaque) */
+        opacity: 1;
+        /* Move element to original position */
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   SECTION 10: RESPONSIVE DESIGN
+   ======================================== */
+
+/* Media query for tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Logo styles for smaller screens */
+    .logo {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+        /* Reduce margin below logo */
+        margin-bottom: 10px;
+    }
+
+    /* Navigation styles for smaller screens */
+    nav ul {
+        /* Reduce gap between navigation items */
+        gap: 15px;
+    }
+
+    /* Hero section heading styles for smaller screens */
+    .hero h2 {
+        /* Reduce font size for smaller screens */
+        font-size: 36px;
+    }
+
+    /* Hero subtitle styles for smaller screens */
+    .subtitle {
+        /* Reduce font size for smaller screens */
+        font-size: 16px;
+    }
+
+    /* Page title heading styles for smaller screens */
+    .page-title h2 {
+        /* Reduce font size for smaller screens */
+        font-size: 28px;
+    }
+
+    /* Intro section heading styles for smaller screens */
+    .intro h2 {
+        /* Reduce font size for smaller screens */
+        font-size: 24px;
+    }
+
+    /* Content section heading styles for smaller screens */
+    .content-section h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+
+    /* Highlight card heading styles for smaller screens */
+    .highlight-card h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 28px;
+    }
+
+    /* Program card heading styles for smaller screens */
+    .program-card h4 {
+        /* Reduce font size for smaller screens */
+        font-size: 16px;
+    }
+
+    /* Mission and vision heading styles for smaller screens */
+    .mission h3, .vision h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 20px;
+    }
+
+    /* Values section heading styles for smaller screens */
+    .values h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+
+    /* Support services heading styles for smaller screens */
+    .support-services h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+
+    /* Facilities heading styles for smaller screens */
+    .facilities h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+
+    /* Contact form section heading styles for smaller screens */
+    .contact-form-section h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+
+    /* Contact info heading styles for smaller screens */
+    .contact-info h3 {
+        /* Reduce font size for smaller screens */
+        font-size: 22px;
+    }
+}
+
+/* Media query for mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Logo styles for mobile screens */
+    .logo {
+        /* Reduce font size for mobile screens */
+        font-size: 18px;
+        /* Reduce margin below logo */
+        margin-bottom: 8px;
+    }
+
+    /* Navigation styles for mobile screens */
+    nav ul {
+        /* Stack navigation items vertically on mobile */
+        flex-direction: column;
+        /* Reduce gap between navigation items */
+        gap: 8px;
+    }
+
+    /* Navigation link styles for mobile screens */
+    nav a {
+        /* Reduce padding for mobile screens */
+        padding: 6px 10px;
+        /* Reduce font size for mobile screens */
+        font-size: 14px;
+    }
+
+    /* Hero section styles for mobile screens */
+    .hero {
+        /* Reduce padding for mobile screens */
+        padding: 40px 0;
+    }
+
+    /* Hero section heading styles for mobile screens */
+    .hero h2 {
+        /* Reduce font size for mobile screens */
+        font-size: 24px;
+    }
+
+    /* Hero subtitle styles for mobile screens */
+    .subtitle {
+        /* Reduce font size for mobile screens */
+        font-size: 14px;
+    }
+
+    /* Page title heading styles for mobile screens */
+    .page-title h2 {
+        /* Reduce font size for mobile screens */
+        font-size: 22px;
+    }
+
+    /* Intro section heading styles for mobile screens */
+    .intro h2 {
+        /* Reduce font size for mobile screens */
+        font-size: 20px;
+    }
+
+    /* Content section heading styles for mobile screens */
+    .content-section h3 {
+        /* Reduce font size for mobile screens */
+        font-size: 18px;
+    }
+
+    /* Highlight card heading styles for mobile screens */
+    .highlight-card h3 {
+        /* Reduce font size for mobile screens */
+        font-size: 24px;
+    }
+
+    /* Program cards container for mobile screens */
+    .programs .container {
+        /* Create single column layout on mobile */
+        grid-template-columns: 1fr;
+    }
+
+    /* Mission and vision container for mobile screens */
+    .mission-vision .container {
+        /* Create single column layout on mobile */
+        grid-template-columns: 1fr;
+        /* Reduce gap between items */
+        gap: 20px;
+    }
+
+    /* Contact info container for mobile screens */
+    .contact-info .container {
+        /* Create single column layout on mobile */
+        grid-template-columns: 1fr;
+    }
+
+    /* Submit button styles for mobile screens */
+    .submit-btn {
+        /* Set width to 100% on mobile */
+        width: 100%;
+        /* Center text alignment */
+        text-align: center;
+    }
+}
