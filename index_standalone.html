@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Page title displayed in browser tab -->
-    <title>Computer Science Department - Contact</title>
+    <title>Computer Science Department - Home</title>
     
     <!-- 
         INTERNAL CSS: The entire stylesheet is included here to ensure the page 
@@ -640,10 +640,10 @@
             <nav>
                 <ul>
                     <!-- Each list item contains a link to different pages -->
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="index_standalone.html" class="active">Home</a></li>
+                    <li><a href="about_standalone.html">About</a></li>
+                    <li><a href="services_standalone.html">Services</a></li>
+                    <li><a href="contact_standalone.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -651,132 +651,54 @@
 
     <!-- Main content area of the page -->
     <main>
-        <!-- Page title section -->
-        <section class="page-title">
+        <!-- Hero section with welcome message and introduction -->
+        <section class="hero">
             <div class="container">
-                <h2>Contact Us</h2>
+                <h2>Welcome to Our Department</h2>
+                <p class="subtitle">Excellence in Education and Innovation</p>
             </div>
         </section>
 
-        <!-- Contact information section -->
-        <section class="contact-info">
+        <!-- Introduction section with main content -->
+        <section class="intro">
             <div class="container">
-                <!-- Section heading -->
-                <h3>Get in Touch</h3>
+                <!-- Main heading for the introduction -->
+                <h2>About Our Department</h2>
                 
-                <!-- Contact information cards displayed in a grid layout -->
-                <!-- Each card contains a different method of contacting the department -->
-                
-                <!-- Email contact card -->
-                <div class="info-card">
-                    <h4>Email</h4>
-                    <p>
-                        <a href="mailto:info@cs-dept.edu">info@cs-dept.edu</a>
-                    </p>
-                    <p class="small-text">For general inquiries and information</p>
-                </div>
-
-                <!-- Phone contact card -->
-                <div class="info-card">
-                    <h4>Phone</h4>
-                    <p>
-                        <a href="tel:+15551234567">(555) 123-4567</a>
-                    </p>
-                    <p class="small-text">Monday to Friday, 9 AM - 5 PM</p>
-                </div>
-
-                <!-- Address contact card -->
-                <div class="info-card">
-                    <h4>Address</h4>
-                    <p>
-                        Computer Science Building<br>
-                        123 University Avenue<br>
-                        Tech City, TC 12345
-                    </p>
-                </div>
-
-                <!-- Office hours contact card -->
-                <div class="info-card">
-                    <h4>Office Hours</h4>
-                    <p>
-                        Monday - Friday: 9:00 AM - 5:00 PM<br>
-                        Saturday: 10:00 AM - 2:00 PM<br>
-                        Sunday: Closed
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact form section -->
-        <section class="contact-form-section">
-            <div class="container">
-                <!-- Form heading -->
-                <h3>Send us a Message</h3>
-                
-                <!-- Introductory text for the form -->
+                <!-- Paragraph providing overview of the department -->
                 <p>
-                    Have questions or feedback? Fill out the form below and we'll get back to you as soon as possible.
+                    The Computer Science Department is dedicated to providing world-class education 
+                    in computer science and technology. Our faculty members are experts in their fields, 
+                    committed to fostering innovation and critical thinking among our students.
                 </p>
+                
+                <!-- Second paragraph highlighting key aspects -->
+                <p>
+                    We offer comprehensive programs designed to prepare students for successful careers 
+                    in the rapidly evolving technology industry. With state-of-the-art facilities and 
+                    experienced instructors, we ensure every student receives the best possible education.
+                </p>
+            </div>
+        </section>
 
-                <!-- HTML contact form with input fields and submit button -->
-                <!-- The form uses semantic HTML elements for accessibility -->
-                <form class="contact-form" action="#" method="POST">
-                    <!-- Name input field -->
-                    <!-- This field is required and accepts text input -->
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input 
-                            type="text" 
-                            id="name" 
-                            name="name" 
-                            placeholder="Enter your full name" 
-                            required
-                        >
-                    </div>
-
-                    <!-- Email input field -->
-                    <!-- This field is required and validates email format -->
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            placeholder="Enter your email address" 
-                            required
-                        >
-                    </div>
-
-                    <!-- Subject input field -->
-                    <!-- This field is required and accepts text input -->
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input 
-                            type="text" 
-                            id="subject" 
-                            name="subject" 
-                            placeholder="What is this about?" 
-                            required
-                        >
-                    </div>
-
-                    <!-- Message textarea field -->
-                    <!-- This field is required and allows multiple lines of text -->
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            placeholder="Please enter your message here..." 
-                            rows="6" 
-                            required
-                        ></textarea>
-                    </div>
-
-                    <!-- Submit button to send the form -->
-                    <!-- The button uses semantic HTML for accessibility -->
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+        <!-- Highlights section showcasing key statistics or features -->
+        <section class="highlights">
+            <div class="container">
+                <!-- Each highlight card displays important information -->
+                <div class="highlight-card">
+                    <h3>500+</h3>
+                    <p>Active Students</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>50+</h3>
+                    <p>Expert Faculty</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>100%</h3>
+                    <p>Job Placement Rate</p>
+                </div>
             </div>
         </section>
     </main>
